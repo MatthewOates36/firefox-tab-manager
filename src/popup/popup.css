@@ -1,0 +1,32 @@
+html, body {
+    font-size: 15px;
+    background: #1b262c;
+    width: 400px;
+    height: 500px;
+}
+
+.menu-button {
+    font-size: 1rem;
+    width: 100%;
+    background: #0f4c75;
+    border: 0;
+    border-radius: 0.25em;
+    color: #BBE1FA;
+}
+
+#workspace-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.tab-item {
+    font-size: 1rem;
+    color: #BBE1FA;
+}

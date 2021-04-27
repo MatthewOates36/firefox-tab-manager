@@ -1,0 +1,52 @@
+{
+    "manifest_version": 2,
+    "name": "Tab Manager",
+    "version": "0.1",
+    "description": "Adds a red border to all webpages.",
+    "permissions": [
+        "tabs",
+        "storage",
+        "menus",
+        "webNavigation"
+    ],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "tab-manager@matthewo.tech",
+            "strict_min_version": "89.0"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": ["assets/load-history.js"]
+        }
+    ],
+    "background": {
+        "scripts": [
+            "browser/background-script.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": "assets/tab-manager-icon.png",
+        "default_title": "Tab Manager",
+        "default_popup": "popup/popup.html"
+    },
+    "experiment_apis": {
+        "stylesheet": {
+            "schema": "stylesheet-experimental/schema.json",
+            "parent": {
+                "scopes": [
+                    "addon_parent"
+                ],
+                "paths": [
+                    [
+                        "stylesheet"
+                    ]
+                ],
+                "script": "stylesheet-experimental/api.js"
+            }
+        }
+    }
+}

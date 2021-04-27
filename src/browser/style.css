@@ -1,0 +1,31 @@
+/*.tab-context-line {*/
+/*    background-color: red !important;*/
+/*    width: 100% !important;*/
+/*    visibility: visible !important;*/
+/*    opacity: 100% !important;*/
+/*    transform: scaleX(0.5) !important;*/
+/*}*/
+
+/*.tab-context-line[selected="true"] {*/
+/*    transform: scaleX(1) !important;*/
+/*}*/
+
+.tab-stack:after {
+    content: "";
+    display: block;
+    background-color: red;
+    margin: 0 auto;
+    width: 40%;
+    padding-top: 3px;
+    border: 0;
+    border-radius: 2px;
+    transition: width 100ms;
+}
+
+.tabbrowser-tab:hover > .tab-stack:after {
+    width: 70%;
+}
+
+.tabbrowser-tab[selected="true"] > .tab-stack:after {
+    width: 100%;
+}
