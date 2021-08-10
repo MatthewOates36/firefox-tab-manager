@@ -44,7 +44,8 @@ this.stylesheet = class extends ExtensionAPI {
                 },
                 async isLoaded(uri, type) {
                     let uriObj = ios.newURI(uri, null, null);
-                    return sss.sheetRegistered(uriObj, sss[type]);
+                    // return sss.sheetRegistered(uriObj, sss[type]);
+                    return Object.keys(uriObj)
                 }
             }
         };

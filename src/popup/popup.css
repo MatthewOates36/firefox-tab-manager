@@ -3,6 +3,7 @@ html, body {
     background: #1b262c;
     width: 400px;
     height: 500px;
+    overflow: hidden;
 }
 
 .menu-button {
